@@ -35,4 +35,8 @@ export class StudentDetailsComponent implements OnInit {
   goBack() {
     this.location.back();
   }
+
+  showReceivedValue(value: boolean) {
+    console.log(value);
+  }
 }
