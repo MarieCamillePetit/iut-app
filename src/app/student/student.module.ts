@@ -8,9 +8,16 @@ import { StudentListComponent } from './pages/student-list/student-list.componen
 import { StudentService } from './services/student.service';
 import { StudentFormComponent } from './components/student-form/student-form.component';
 import { StudentDetailsComponent } from './pages/student-details/student-details.component';
+import { StudentCardComponent } from './components/student-card/student-card.component';
 
 @NgModule({
-  declarations: [StudentComponent, StudentListComponent, StudentFormComponent, StudentDetailsComponent],
+  declarations: [
+    StudentComponent,
+    StudentListComponent,
+    StudentFormComponent,
+    StudentDetailsComponent,
+    StudentCardComponent,
+  ],
   imports: [CommonModule, StudentRoutingModule, SharedModule],
   providers: [StudentService],
 })

@@ -1,4 +1,5 @@
-<p>student-details works!</p>
-
+<button mat-raised-button (click)="goBack()"><mat-icon>arrow_back</mat-icon> Retour</button>
 {{studentId}}
 {{student$ | async | json}}
+
+<app-student-card [selectedStudent]="student$ | async"></app-student-card>

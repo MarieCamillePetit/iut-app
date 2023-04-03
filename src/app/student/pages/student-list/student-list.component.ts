@@ -6,6 +6,7 @@ import { GenericPopupComponent } from 'src/app/shared/components/generic-popup/g
 import { StudentFormComponent } from '../../components/student-form/student-form.component';
 import { Student } from '../../models/student';
 import { StudentService } from '../../services/student.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -27,7 +28,8 @@ export class StudentListComponent implements OnInit, OnDestroy {
   constructor(
     private studentService: StudentService,
     private dialog: MatDialog,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnDestroy(): void {
@@ -95,5 +97,9 @@ export class StudentListComponent implements OnInit, OnDestroy {
             });
         }
       });
+  }
+
+  showStudentDetails(StudentId: number) {
+    this.router.navigate(['/students/' + StudentId]);
   }
 }
