@@ -4,5 +4,5 @@ export interface Student {
   lastName: string;
   class: string;
   email: string;
-  dateOfBirth: Date;
+  dateOfBirth: string;
 }
